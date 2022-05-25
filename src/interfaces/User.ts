@@ -1,0 +1,16 @@
+export interface IUser {
+  id: string;
+  name: string;
+  age: number;
+  create_at: string;
+  update_at: string;
+  email: string;
+  password: string;
+}
+
+export interface IUserCreate {
+  name: string;
+  age: number;
+  password: string;
+  email: string;
+}
