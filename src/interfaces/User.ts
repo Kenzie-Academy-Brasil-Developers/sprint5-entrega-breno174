@@ -14,3 +14,8 @@ export interface IUserCreate {
   password: string;
   email: string;
 }
+
+export interface IUserLogin {
+  email: string;
+  password: string;
+}
