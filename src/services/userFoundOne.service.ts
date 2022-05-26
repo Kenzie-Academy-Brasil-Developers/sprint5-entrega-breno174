@@ -1,6 +1,7 @@
 import { AppDataSource } from "../data-source";
 import { Request } from "express";
 import { User } from "../entities/user";
+import { userWOPassword } from "../utils";
 
 const userFoundOndeService = async (req: Request) => {
   //const foundOne = req.user;
@@ -10,7 +11,7 @@ const userFoundOndeService = async (req: Request) => {
 
   const user = (await users).find((user) => user.id === id);
 
-  return user;
+  return userWOPassword(user);
 };
 
 export default userFoundOndeService;

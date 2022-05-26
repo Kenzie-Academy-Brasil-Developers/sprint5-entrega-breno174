@@ -2,6 +2,7 @@ import bcrypt from "bcrypt";
 import { AppDataSource } from "../data-source";
 import { User } from "../entities/user";
 import { IUserCreate } from "../interfaces/user";
+import { userWOPassword } from "../utils";
 
 const userCreateService = async ({
   name,
@@ -20,7 +21,7 @@ const userCreateService = async ({
   userrepository.create(user);
   await userrepository.save(user);
 
-  return user;
+  return userWOPassword(user);
 };
 
 export default userCreateService;
