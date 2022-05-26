@@ -12,7 +12,7 @@ export const AppDataSource = new DataSource({
 
   username: process.env.POSTGRESS_USER,
   password: process.env.POSTGRESS_PWD,
-  database: process.env.PORTGRESS_DB,
+  database: process.env.POSTGRESS_DB,
 
   logging: false,
   entities: [path.join(__dirname, "./entities/**/*.{js,ts}")],

@@ -8,11 +8,17 @@ const userAlreadyExistMiddleware = async (
   next: NextFunction
 ) => {
   const userRepository = AppDataSource.getRepository(User);
-  const foundUser = await userRepository.findOne(req.body.email);
-  if (foundUser) {
-    return res.status(400).json({
-      error: "user already exist",
-    });
+  try {
+    const { email } = req.body;
+    const users = await userRepository.find();
+    const foundUser = users.find((user) => user.email === email);
+    if (foundUser) {
+      return res.status(400).json({
+        error: "user already exist",
+      });
+    }
+  } catch {
+    return next();
   }
 
   return next();

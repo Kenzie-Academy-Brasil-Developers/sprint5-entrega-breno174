@@ -11,13 +11,13 @@ const getUserOr404Middleware = async (
   const userRepository = AppDataSource.getRepository(User);
   const users = userRepository.find();
 
-  const foundOne = (await users).find((user) => user.id === id);
-  if (!foundOne) {
+  const user = (await users).find((user) => user.id === id);
+  if (!user) {
     return res.status(404).json({
       error: `not found user by id: (${id})`,
     });
   }
-  req.user = foundOne as User;
+  req.user = user as User;
 
   return next();
 };

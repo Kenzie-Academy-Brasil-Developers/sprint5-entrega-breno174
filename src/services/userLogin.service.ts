@@ -2,7 +2,7 @@ import { User } from "../entities/user";
 import { AppDataSource } from "../data-source";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
-import { IUserLogin } from "../interfaces/User";
+import { IUserLogin } from "../interfaces/user";
 import * as dotenv from "dotenv";
 
 dotenv.config();
