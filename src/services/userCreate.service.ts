@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 import { AppDataSource } from "../data-source";
-import { User } from "../entities/user";
+import { User } from "../entities/User";
 import { IUserCreate } from "../interfaces/user";
 import { userWOPassword } from "../utils";
 

@@ -1,3 +1,5 @@
+import { User } from "../entities/User";
+
 export interface IUser {
   id: string;
   name: string;
@@ -18,4 +20,12 @@ export interface IUserCreate {
 export interface IUserLogin {
   email: string;
   password: string;
+}
+
+declare global {
+  namespace Express {
+    interface Request {
+      user: User;
+    }
+  }
 }

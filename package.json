@@ -1,7 +1,7 @@
 {
   "name": "sprint5-entrega-breno174",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/data-source.ts",
   "repository": "git@github.com:Kenzie-Academy-Brasil-Developers/sprint5-entrega-breno174.git",
   "author": "breno174 <breno.angelim@hotmail.com>",
   "license": "MIT",

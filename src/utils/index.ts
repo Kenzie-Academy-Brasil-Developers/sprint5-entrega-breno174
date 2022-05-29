@@ -1,4 +1,4 @@
-import { User } from "../entities/user";
+import { User } from "../entities/User";
 
 const userWOPassword = (user: User): Partial<User> => {
   const { password, ...userWOPwd } = user;
